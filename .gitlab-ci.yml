@@ -11,3 +11,9 @@ job 2:
   stage: test
   script: cat file1.txt file2.txt | grep -q "hello world"
 
+job 3:
+  stage: deploy
+  echo: cat file1.txt file2.txt | gzip > mypackagedzip.gz
+  artifacts: 
+    paths:
+      - mypackagedzip
