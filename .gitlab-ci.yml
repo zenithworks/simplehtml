@@ -16,5 +16,5 @@ job 3:
   script: make test
 
 job 4:
-  stage: deploy
+  stage: deploy 
   script: make deploy
