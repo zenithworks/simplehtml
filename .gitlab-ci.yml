@@ -7,11 +7,3 @@ job 1:
   stage: build
   script: "echo `date`"
 
-job 3:
-  stage: test
-  script: make test
-
-job 4:
-  stage: deploy
-  script: make deploy
-
