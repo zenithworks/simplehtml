@@ -13,7 +13,7 @@ job 2:
 
 job 3:
   stage: deploy
-  echo: cat file1.txt file2.txt | gzip > mypackagedzip.gz
+  script: cat file1.txt file2.txt | gzip > mypackagedzip.gz
   artifacts: 
     paths:
     - mypackagedzip
