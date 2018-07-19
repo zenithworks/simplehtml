@@ -20,12 +20,12 @@ pack-gz:
 pack-iso:
   stage: package
 #mkisofs is not a part of alpine distribution, so you need to install it before running the command
-script: 
-- echo "ipv6" >> /etc/modules
-- apk update
-- apk add xorriso
-- mkisofs -o ./packaged.iso ./compiled.txt
-artifacts:
+  script: 
+  - echo "ipv6" >> /etc/modules
+  - apk update
+  - apk add xorriso
+  - mkisofs -o ./packaged.iso ./compiled.txt
+  artifacts:
     paths:
-    - packaged.gz
+    - packaged.iso
 
