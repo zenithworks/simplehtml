@@ -16,4 +16,4 @@ job 3:
   script: cat file1.txt file2.txt | gzip > mypackagedzip.gz
   artifacts: 
     paths:
-    - mypackagedzip
+    - mypackagedzip.gz
