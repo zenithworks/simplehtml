@@ -1,19 +1,19 @@
+image: alpine
+
 stages:
-  - build
+  - compile
   - test
-  - deploy
+  - package
 
-job 1:
-  stage: build
-  script: "echo `date`"
-
+# ... "compile" and "test" jobs are skipped here for the sake of compactness
 job 2:
   stage: test
   script: cat file1.txt file2.txt | grep -q "hello world"
 
-job 3:
-  stage: deploy
-  script: cat file1.txt file2.txt | gzip > mypackagedzip.gz
-  artifacts: 
+pack-gz:
+  stage: package
+  script: cat file1.txt file2.txt | gzip > packaged.gz
+  artifacts:
     paths:
-    - mypackagedzip.gz
+    - packaged.gz
+
