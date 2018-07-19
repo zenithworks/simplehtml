@@ -24,7 +24,8 @@ pack-iso:
   - echo "ipv6" >> /etc/modules
   - apk update
   - apk add xorriso
-  - mkisofs -o ./packaged.iso ./compiled.txt
+  - cat file1.txt file2.txt > combined.txt
+  - mkisofs -o ./packaged.iso ./combined.txt
   artifacts:
     paths:
     - packaged.iso
