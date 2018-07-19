@@ -1,4 +1,4 @@
-image: alpine
+image: alpine #using this linux distribution makes the runner start super fast!!
 
 stages:
   - compile
@@ -14,6 +14,18 @@ pack-gz:
   stage: package
   script: cat file1.txt file2.txt | gzip > packaged.gz
   artifacts:
+    paths:
+    - packaged.gz
+
+pack-iso:
+  stage: package
+#mkisofs is not a part of alpine distribution, so you need to install it before running the command
+script: 
+- echo "ipv6" >> /etc/modules
+- apk update
+- apk add xorriso
+- mkisofs -o ./packaged.iso ./compiled.txt
+artifacts:
     paths:
     - packaged.gz
 
