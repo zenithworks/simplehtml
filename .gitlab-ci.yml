@@ -28,5 +28,5 @@ pack-iso:
   - mkisofs -o ./packaged.iso ./combined.txt
   artifacts:
     paths:
-    - packaged.iso
+    - packaged.iso 
 
