@@ -43,6 +43,6 @@ The GitHub Releases task can run in 3 action types, viz. create, edit or discard
                 * Replace existing assets: When using this option, the task will replace any assets that have the same name. Assets that do not have a name conflict will be present in the newer release.
 * **Draft Release** This option specifies if the release has to be saved as a draft release or a published release.
 * **Pre Release** This option specifies if the release has to be marked as a pre-release.
-
+ 
 
 
