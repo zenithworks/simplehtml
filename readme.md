@@ -1,1 +1,1 @@
-fixing issue #3
+closing issue #3
