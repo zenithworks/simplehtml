@@ -26,16 +26,16 @@ The GitHub Releases task can run in 3 action types, viz. create, edit or discard
 
 * **Action:** Action is the type of release operation you want perform using this task. This task can perform 3 different actions - create, edit or discard.
 
-* Create: This action creates a github release. Throws error if a published release already exists with the given tag.
-* Edit: This action modifies a existing github release. Tag is used to identify the release to be edited. Throws error if more than 1 release(draft or published) is found with the given tag.
-* Discard: This action deletes a github release. Tag is used to identify the release to be deleted. Throws error if more than 1 release(draft or published) is found with the given tag.
+    * Create: This action creates a github release. Throws error if a published release already exists with the given tag.
+    * Edit: This action modifies a existing github release. Tag is used to identify the release to be edited. Throws error if more than 1 release(draft or published) is found with the given tag.
+    * Discard: This action deletes a github release. Tag is used to identify the release to be deleted. Throws error if more than 1 release(draft or published) is found with the given tag.
 
 * **Target:** This is the commit SHA for which the github release will be created. By default, the value is $(Build.SourceVersion) which corresponds to the commit for which the build was run. If you specify a branch name here(E.g. *master* ), the latest commit from this branch will be used as target. This field is ignored when using edit and discard actions.
 
 * **Tag Source:** This field allows you to configure the tag to be used for a release action. It can be done in 2 ways:
 
-* Git tag: This option is available only for *create* action. If selected, the release will be created using the git tag that is associated with this commit. If no tag is found for the given commit, the release will not be created. If multiple tags are found, the task will throw an error.
-* User specified tag: When this option is used, the release will be created using the tag mentioned. You can also mention the tag using variables, Eg. v\$(MajorVersion).\$(MinorVersion).\$(PatchVersion). For release edit and discard actions, it is mandatory to use this option.
+    * Git tag: This option is available only for *create* action. If selected, the release will be created using the git tag that is associated with this commit. If no tag is found for the given commit, the release will not be created. If multiple tags are found, the task will throw an error.
+    * User specified tag: When this option is used, the release will be created using the tag mentioned. You can also mention the tag using variables, Eg. v\$(MajorVersion).\$(MinorVersion).\$(PatchVersion). For release edit and discard actions, it is mandatory to use this option.
 
 * **Release Title:** This is the title that will be used for release creation. If left empty, the tag name will be used as the release title.
 
@@ -46,8 +46,8 @@ The GitHub Releases task can run in 3 action types, viz. create, edit or discard
 * **Assets** These are the files that will be uploaded as assets for the release. You can use wild card characters to specify a set of files. All the matching files shall be uploaded. You can also specify multiple patterns - one path per line. By default, it uploads the contents of $(Build.ArtifactStagingDirectory). If the specified folder is missing, it throws a warning.
 
 * **Asset Upload Mode** This option is used in case of editing a release. There are 2 ways in which assets can be uploaded.
-* Delete existing assets: When using this option, the task will first delete any existing assets in the release and upload all the assets once again.
-* Replace existing assets: When using this option, the task will replace any assets that have the same name*
+    * Delete existing assets: When using this option, the task will first delete any existing assets in the release and upload all the assets once again.
+    * Replace existing assets: When using this option, the task will replace any assets that have the same name*
 
 * **Draft Release**  Check this option if the release has to be saved as a draft release. If kept unchecked, the created release will be published.  This option is ignored in case of *discard* action.
 
