@@ -40,16 +40,14 @@ The GitHub Releases task can run in 3 action types, viz. create, edit or discard
 * **Release Title:** This is the title that will be used for release creation. If left empty, the tag name will be used as the release title.
 
 * **Release Notes Source:** This field lets you specify the source for the description of your github release. There are 2 ways for doing this:
-                * Release notes file: On selecting this, you will have to specify the path to the file. The contents of this file will be copied as release notes at the time of release creation.
-                * Inline release notes: On selecting this, you can manually type your release notes into a text area. The contents of this text area will be copied as release notes at the time of release creation.
+* Release notes file: On selecting this, you will have to specify the path to the file. The contents of this file will be copied as release notes at the time of release creation.
+* Inline release notes: On selecting this, you can manually type your release notes into a text area. The contents of this text area will be copied as release notes at the time of release creation.
 
 * **Assets** These are the files that will be uploaded as assets for the release. You can use wild card characters to specify a set of files. All the matching files shall be uploaded. You can also specify multiple patterns - one path per line. By default, it uploads the contents of $(Build.ArtifactStagingDirectory). If the specified folder is missing, it throws a warning.
 
 * **Asset Upload Mode** This option is used in case of editing a release. There are 2 ways in which assets can be uploaded.
-
-                * Delete existing assets: When using this option, the task will first delete any existing assets in the release and upload all the assets once again.
-
-                * Replace existing assets: When using this option, the task will replace any assets that have the same name*
+* Delete existing assets: When using this option, the task will first delete any existing assets in the release and upload all the assets once again.
+* Replace existing assets: When using this option, the task will replace any assets that have the same name*
 
 * **Draft Release**  Check this option if the release has to be saved as a draft release. If kept unchecked, the created release will be published.  This option is ignored in case of *discard* action.
 
