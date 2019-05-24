@@ -7,8 +7,9 @@ pool:
   vmImage: 'Ubuntu 16.04'
 
 trigger:
-- refs/heads/master
-- refs/tags/*
+  branches:
+    include:
+    - '*'
 
 steps:
 - script: echo Hello, world!
