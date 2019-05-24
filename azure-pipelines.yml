@@ -12,7 +12,7 @@ trigger:
 
 steps:
 - script: echo Hello, world!
-  displayName: 'one-line script'
+  displayName: 'one-line script1'
 
 - script: |
     echo Add other tasks to build, test, and deploy your project.
